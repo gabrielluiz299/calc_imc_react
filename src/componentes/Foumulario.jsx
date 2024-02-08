@@ -6,22 +6,22 @@ const Formulario = () => {
     let [peso, setPeso] = useState(0);
 
     const renderizaResultado = () => {
-        const alturaPeso = altura * altura;
-        const imc = peso / alturaPeso;
+        const alturaPeso = altura ** 2 / peso;
+        console.log(alturaPeso);
         
-        if (imc < 18,5) {
+        if (alturaPeso < 18,5) {
             return (
                 <p>Você está abaixo do peso</p>
             )
-        } else if (imc >= 18,5 && imc < 25) {
+        } else if (alturaPeso >= 18,5 && alturaPeso < 25) {
             return (
                 <p>Você está com o peso normal</p>
             )
-        } else if (imc >= 25 && imc < 30) {
+        } else if (alturaPeso >= 25 && alturaPeso < 30) {
             return (
                 <p>Você está com sobrepeso</p>
             )
-        } else if (imc > 30 && imc < 40) {
+        } else if (alturaPeso > 30 && alturaPeso < 40) {
             return (
                 <p>Você está com obesidade</p>
             )
