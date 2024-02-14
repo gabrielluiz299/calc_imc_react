@@ -6,14 +6,14 @@ const Formulario = () => {
     let [peso, setPeso] = useState(0);
 
     const renderizaResultado = () => {
-        const alturaPeso = altura ** 2 / peso;
+        const alturaPeso = peso / altura ** 2;
         console.log(alturaPeso);
         
-        if (alturaPeso < 18,5) {
+        if (alturaPeso < 18.5) {
             return (
                 <p>Você está abaixo do peso</p>
             )
-        } else if (alturaPeso >= 18,5 && alturaPeso < 25) {
+        } else if (alturaPeso >= 18.5 && alturaPeso < 25) {
             return (
                 <p>Você está com o peso normal</p>
             )
